@@ -3,11 +3,6 @@
 
 Slack Connect is a full-stack web application that allows users to connect their Slack workspace, compose messages, send them immediately, or schedule them for future delivery — with automatic token refresh and secure integration.
 
-## 🌐 Live Demo
-
-Frontend (Vercel): [https://slack-connect-eta.vercel.app/](https://slack-connect-eta.vercel.app/)
-Backend (Render): [https://slack-connect-backend.onrender.com](https://slack-connect-backend.onrender.com)
-
 ---
 
 ## 📌 Features
@@ -29,7 +24,6 @@ Backend (Render): [https://slack-connect-backend.onrender.com](https://slack-con
 | Backend     | Node.js, Express, TypeScript   |
 | Database    | MongoDB Atlas                  |
 | Auth        | Slack OAuth 2.0                |
-| Deployment  | Vercel (frontend), Render (backend) |
 
 ---
 
@@ -109,28 +103,6 @@ npm run dev
 
 Open \`http://localhost:3000\`
 
----
-
-## 📦 Deployment
-
-### 🟨 Backend (Render)
-
-- Create a new web service from GitHub
-- Set root to \`/backend\`
-- Add the same \`.env\` values in the Render dashboard
-- Set start command:
-  \`\`\`bash
-  npx ts-node src/app.ts
-  \`\`\`
-
-### 🟩 Frontend (Vercel)
-
-- Import project from GitHub
-- Set root to \`/frontend\`
-- Add:
-  \`\`\`env
-  NEXT_PUBLIC_API_URL=[https://your-backend.onrender.com](https://slack-connect-backend.onrender.com)
-  \`\`\`
 
 ---
 
@@ -165,6 +137,4 @@ Feel free to open an issue or create a PR — always happy to improve this!
 
 ---
 
-## 📄 License
 
-MIT License
