@@ -27,13 +27,14 @@ Slack Connect is a full-stack web application that allows users to connect their
 
 ---
 
-## 📁 Project Structure
+## 📁 Directory Layout
 
-\`\`\`
+```
 slack-connect/
-├── backend/           # Express API (OAuth, scheduling)
-├── frontend/          # Next.js UI
-\`\`\`
+├── backend/   # Express server (OAuth, scheduling, APIs)
+├── frontend/  # Next.js client application
+
+```
 
 ---
 
@@ -42,13 +43,13 @@ slack-connect/
 1. Go to https://api.slack.com/apps → Create a new app
 2. Enable:
    - **OAuth & Permissions**  
-     - Redirect URL: \`https://slack-connect-backend.onrender.com/auth/slack/callback\`
-     - Scopes: \`chat:write\`, \`channels:read\`, \`groups:read\`, \`users:read\`
+     - Redirect URL: `https://slack-connect-backend.onrender.com/auth/slack/callback`
+     - Scopes: `chat:write`, `channels:read`, `groups:read`, `users:read`
    - **Bot Token** → Create a bot user
 3. Save:
-   - \`SLACK_CLIENT_ID\`
-   - \`SLACK_CLIENT_SECRET\`
-   - \`SLACK_REDIRECT_URI\`
+   - `SLACK_CLIENT_ID`
+   - `SLACK_CLIENT_SECRET`
+   - `SLACK_REDIRECT_URI`
 
 ---
 
@@ -56,52 +57,52 @@ slack-connect/
 
 ### 1. Clone the repo
 
-\`\`\`bash
+```bash
 git clone https://github.com/your-username/slack-connect.git
 cd slack-connect
-\`\`\`
+```
 
 ---
 
 ### 2. Backend Setup
 
-\`\`\`bash
+```bash
 cd backend
 npm install
-\`\`\`
+```
 
 #### Create `.env` file:
-\`\`\`env
+```env
 PORT=5000
 MONGO_URI=your_mongo_connection_string
 SLACK_CLIENT_ID=your_client_id
 SLACK_CLIENT_SECRET=your_client_secret
 SLACK_REDIRECT_URI=http://localhost:5000/auth/slack/callback
-\`\`\`
+```
 
-\`\`\`bash
+```bash
 npx ts-node-dev src/app.ts
-\`\`\`
+```
 
 ---
 
 ### 3. Frontend Setup
 
-\`\`\`bash
+```bash
 cd frontend
 npm install
-\`\`\`
+```
 
 #### Create `.env.local` file:
-\`\`\`env
+```env
 NEXT_PUBLIC_API_URL=http://localhost:5000
-\`\`\`
+```
 
-\`\`\`bash
+```bash
 npm run dev
-\`\`\`
+```
 
-Open \`http://localhost:3000\`
+Open `http://localhost:3000`
 
 
 ---
